@@ -7,3 +7,4 @@ def index(request):
     picture = Image.objects.all()
 
     return render(request, 'index.html',{"picture":picture})
+

@@ -1,13 +1,36 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 {{block.super}}
-<h1>Trying to make the image display</h1>
- {% for picture in picture %}
-    {% if picture.image %}
-        <img src="{{picture.picture.url}}" class="img-responsive" alt="Image">
-    {% endif %}
- {% endfor %}
+<h1>TRIAL</h1>
+<h4>TRIAL</h4>
 
+<div class="container">
+    <!--Home Section-->
+<section id="homesection">
+        <img src="https://source.unsplash.com/random/1820x400" alt="">
 
-
+</section>
+<!--About Section-->
+<section="aboutsection">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, sed. Sunt rerum impedit voluptatibus sed dignissimos soluta quaerat unde repellat eius eaque nam voluptatem reprehenderit vel veritatis illo, ullam ab veniam officiis molestiae voluptatum, alias error. Rerum, recusandae vitae similique nemo iusto ex asperiores, voluptatem impedit deleniti laboriosam modi natus quos facilis ipsa error ratione iure vero. Eligendi eveniet itaque magni blanditiis cupiditate aliquid, omnis quisquam veniam at cumque amet consequatur, ea exercitationem dolore numquam quos ipsum quibusdam? Blanditiis pariatur harum ad corporis ex! Iusto qui ex sunt unde porro fuga, maxime maiores voluptas explicabo, animi quos architecto, veritatis tenetur.
+</section>
+<!--Project Section-->
+<section ="projectsection">
+        <img src="https://source.unsplash.com/random/200x200" alt="">
+        <img src="https://source.unsplash.com/random/201x200" alt="">
+        <img src="https://source.unsplash.com/random/202x200" alt="">
+        <img src="https://source.unsplash.com/random/203x200" alt="">
+        {% for picture in picture %}
+            <img src="{{picture.image.url}}" alt="image">
+         {% endfor %} 
+</section>
+<!--Contact Section-->
+<section="contactsection">
+ <i class="fas fa-map-marker fa-2x"></i><p>Location</p>
+ <i class="fas fa-phone fa-2x"></i><p>Phone Number</p>
+ <i class="fas fa-envelope fa-2x"></i><p>Email</p>
+ 
+</section>
+</div>
 {% endblock%}
