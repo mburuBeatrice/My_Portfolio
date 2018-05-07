@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+{{block.super}}
+<h1>Trying to make the image display</h1>
+ {% for picture in picture %}
+    {% if picture.image %}
+        <img src="{{picture.picture.url}}" class="img-responsive" alt="Image">
+    {% endif %}
+ {% endfor %}
+
+
+
+{% endblock%}
