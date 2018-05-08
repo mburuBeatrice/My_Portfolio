@@ -1,35 +1,109 @@
 {% extends 'base.html' %}
 {% block content %}
 {{block.super}}
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-
-<div class="container">
-    <!--Home Section-->
-<section id="homesection">
-        <img src="https://source.unsplash.com/random/1820x400" alt="">
-
-</section>
-<!--About Section-->
-<section="aboutsection">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, sed. Sunt rerum impedit voluptatibus sed dignissimos soluta quaerat unde repellat eius eaque nam voluptatem reprehenderit vel veritatis illo, ullam ab veniam officiis molestiae voluptatum, alias error. Rerum, recusandae vitae similique nemo iusto ex asperiores, voluptatem impedit deleniti laboriosam modi natus quos facilis ipsa error ratione iure vero. Eligendi eveniet itaque magni blanditiis cupiditate aliquid, omnis quisquam veniam at cumque amet consequatur, ea exercitationem dolore numquam quos ipsum quibusdam? Blanditiis pariatur harum ad corporis ex! Iusto qui ex sunt unde porro fuga, maxime maiores voluptas explicabo, animi quos architecto, veritatis tenetur.
-</section>
-<!--Project Section-->
-<section ="projectsection">
-        <img src="https://source.unsplash.com/random/200x200" alt="">
-        <img src="https://source.unsplash.com/random/201x200" alt="">
-        <img src="https://source.unsplash.com/random/202x200" alt="">
-        <img src="https://source.unsplash.com/random/203x200" alt="">
-        {% for picture in picture %}
-            <img src="{{picture.image.url}}" alt="image">
-         {% endfor %} 
-</section>
-<!--Contact Section-->
-<section="contactsection">
- <i class="fas fa-map-marker fa-2x"></i><p>Location</p>
- <i class="fas fa-phone fa-2x"></i><p>Phone Number</p>
- <i class="fas fa-envelope fa-2x"></i><p>Email</p>
- 
-</section>
-</div>
+<!-- Start Nav Section -->
+<nav id="navbar" class="navbar">
+    <ul class="nav-menu">
+      <li>
+        <a data-scroll="home" href="#home" class="dot active">
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a data-scroll="about" href="#about" class="dot">
+          <span>About me</span>
+        </a>
+      </li>
+      <li>
+        <a data-scroll="services" href="#services" class="dot">
+          <span>Services</span>
+        </a>
+      </li>
+      <li>
+        <a data-scroll="contact" href="#contact" class="dot">
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- End Nav Section -->
+  
+  <!-- Start Home Section -->
+  <section id="home" class="section">
+    <div class="container">
+      <div class="content-wrapper text-center">
+        <div class="content">
+          <h1>Beatrice Mburu </h1>
+          <p>Fullstack Web Developer</p>
+          <button>CHECK OUT MY PORTFOLIO</button>
+        </div>
+      </div>  
+    </div>
+  </section>
+  <!-- End Home Section -->
+  
+  <!-- Start About Me Section -->
+  <section id="about">
+    <div class="container text-center">
+          <h2>ABOUT ME</h2>
+          <p>I am a fullstack web developer based in Nairobi,Kenya.</br>
+          I enjoy solving complex problems and making technology work for people.When am not coding you'll find me reading a book or playing with my cat.</p>
+          <img src="https://pbs.twimg.com/media/BsTqKNDIcAAE5m5.jpg" alt="" />
+    </div>
+  </section>
+  <!-- End About Me Section -->
+  
+  <!-- Start Services Section -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="content-wrapper text-center">
+        <div class="content">
+          <h2>RECENT PROJECTS</h2>
+        
+          <div class="services">
+            <div class="service text-left">
+              <h4>Gallery App</h4>
+              <img src="https://source.unsplash.com/random/400x400" alt="">
+            </div>
+            <div class="service text-right">
+              <h4>GitSearch App</h4>
+              <img src="https://source.unsplash.com/random/401x400" alt="">
+            </div>
+            <div class="service text-left">
+              <h4>Netflix clone</h4>
+              <img src="https://source.unsplash.com/random/402x400" alt="">
+            </div>
+            <div class="service text-right">
+              <h4>Instagram clone</h4>
+              <img src="https://source.unsplash.com/random/403x400" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+  <!-- End Services Section -->
+  
+  <!-- Start Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="content-wrapper text-center">
+        <div class="content">
+          <h2>CONTACT</h2>
+          <p>Want to work together?Send me an email and we can connect.</p>
+          <h6 class="mail">mburubeatricewanjiru@gmail.com</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+  
+  
+  <!-- Start Footer Section -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; Beatrice Mburu 2018</p>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
 {% endblock%}
